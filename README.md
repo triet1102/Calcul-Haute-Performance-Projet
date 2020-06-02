@@ -43,12 +43,13 @@ vérifier combien de mots en dict.txt sont en shadow.txt
 (./my_sha_shadow_generator dict.txt shadowSmall.txt 30)
 
 **./multiattack nombre_processus dict_file_hashed shasum_file** : utiliser nombre_processus processus pour les calculs parallèles (nombre_processus est le nombre de processus fils quand on utilise fork() )
+
 (./multiattack 4 dict_hashed.txt shadow.txt)
 
 **./openmp nombre_thread dict_file_hashed shasum_file** :  utiliser nombre_thread threads pour les calculs parallèles.
 (./openmp 8 dich_hashed.txt shadow.txt)
 
-### Note pour openmp_parallel.c
+### Note pour fichier openmp_parallel.c
 Dans le boucle **for (i=0; i<3000; ++i)**
 Le numéro 3000 dans ce cas est le nombre de ligne dans le fichier shadow.txt, si on veut tester sur un autre fichier, il faut juste remplacer le numéro 3000 par le nombre de ligne dans le shasum_file qu'on veut utiliser.
 
