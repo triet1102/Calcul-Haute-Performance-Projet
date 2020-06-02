@@ -9,22 +9,28 @@ vérifier combien de mots en dict.txt sont en shadow.txt
 ### Fichiers inclus:
 
 **dict.txt** : contient des mots clairs dans un dictionnaire
+
 **dict_hashed.txt** : contient des mots hachés du dict.txt
 
 **shadow.txt** : contient des mots de passe hachés
+
 **shadowSmall.txt** : une petite version de shadow.txt
 
 **my_sha_dict_generator.c** : à partir de dict.txt, créer dict_hash.txt
+
 **my_sha_shadow_generator.c** : étant donné un fichier contient des mots clairs (par example dict.txt), hasher n mots aléatoires et mettre dans un autre fichier (par example shadowSmall.txt)
 
 **multiattack.c** : en utilisant **fork()**, vérifier combien de mots en dict_hashed.txt (dict.txt haché) sont en shadow.txt (ou en shadowSmall.txt) 
+
 **openmp_parallel.c** : en utilisant **openmp**, vérifier combien de mots en dict_hashed.txt (dict.txt haché) sont en shadow.txt (ou en shadowSmall.txt) 
 
 ### Compiler
 **gcc -o my_sha_dict_generator my_sha_dict_generator.c -lssl -lcrypto** : compiler my_sha_dict_generator.c
+
 **gcc -o my_sha_shadow_generator my_sha_shadow_generator.c -lssl -lcrypto** : compiler my_sha_shadow_generator.c
 
 **gcc -o multiattack multiattack.c** : compiler multiattack.c
+
 **gcc -fopenmp -o openmp openmp_parallel.c** : compiler openmp_parallel.c
 
 ### Syntax
